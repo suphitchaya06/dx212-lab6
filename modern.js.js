@@ -16,7 +16,7 @@ const buses = [
 ];
 
 for ( let i  =0;i < buses.length; i++){
-    console.log (buses[i].route.buses[i].passengers,buses[i].late);
+    //console.log (buses[i].route.buses[i].passengers,buses[i].late);
 }
 
 for (const bus of buses){
@@ -32,11 +32,12 @@ console.log(lateBuses);
 console.log(heavyBuses);
 
 const totalPassengers = buses.reduce(
-    (total, {passengers}) ==> total + Passengers, 0
+    (total, {passengers}) => total + Passengers, 0
 );
 
-const totalPassengersOfHaevyBuses = buses.filter(((Passengers)) ==> Passengers > 50).reduce(
+const totalPassengersOfHaevyBuses = buses.filter(((Passengers)) => Passengers > 50).reduce(
+ (total, { passengers }) => total + passengers, 0
 );
 
 console.log(totalPassengers);
-console.log(totalPassengersOfHaevyBuses)
+console.log(totalPassengersOfHaevyBuses);
